@@ -1,0 +1,147 @@
+/* Import basic styles */
+/* Color scheme */
+/* Other */
+/* Breakpoints for the responsive layout - according to https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+/* 600px */
+/* 600px */
+/* 768px */
+/* 992px */
+/* 1200px */
+body {
+  margin: 0 auto;
+  background-color: #00665e;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  text-align: center;
+  font-family: sans-serif; }
+
+.btn {
+  display: block;
+  border-radius: 5px;
+  padding: 0.9em;
+  transition: all 0.3s ease-in;
+  box-shadow: 0 0 5px grey; }
+
+.btnHeader {
+  margin: 2em 2.5em;
+  border: 2px solid white;
+  background-color: grey;
+  color: white;
+  text-decoration: none; }
+  .btnHeader:hover {
+    background-color: black;
+    color: yellow; }
+
+header {
+  margin: 2em;
+  padding: 1.3em 1.5em;
+  background-color: rgba(255, 255, 255, 0.5); }
+  header h1 {
+    padding: 0.3em 0 0;
+    border-top: 3px dashed black;
+    color: black;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em; }
+  header > .fas {
+    font-size: 6em;
+    padding: 0.1em; }
+  header h2 {
+    font-size: 1.1em; }
+  header p {
+    padding-bottom: 1em;
+    letter-spacing: 0.1em;
+    font-size: 0.9em; }
+
+section {
+  margin: 2em;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.5); }
+  section h2 {
+    margin: 1.5em 1em; }
+
+.innerHeadline {
+  padding-top: 0.5em;
+  margin-bottom: 1em;
+  font-size: 1.4em;
+  border-top: 2px dashed black;
+  text-transform: uppercase; }
+
+.innerText {
+  display: none; }
+
+button {
+  padding: 0.5em 0.7em;
+  margin: 0.7em;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px grey; }
+
+footer {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1em;
+  font-family: sans-serif; }
+  footer h4 {
+    font-size: 0.9em; }
+  footer a {
+    margin: 0.5em 1em 0; }
+
+#form {
+  padding: 1.5em 0;
+  font-size: 0.9em;
+  max-width: 20em; }
+  #form h2 {
+    padding: 0.2em;
+    margin-bottom: 1em;
+    border-bottom: 2px dashed black;
+    text-transform: uppercase; }
+  #form label {
+    display: inline-block;
+    margin-bottom: 1.5em;
+    margin-right: 0.2em;
+    width: 10em;
+    text-align: left; }
+  #form label:nth-of-type(-n+2) {
+    width: 12em; }
+  #form input {
+    display: inline;
+    padding: 0.5em 0.3em;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 5px grey; }
+  #form input:nth-of-type(-n+2) {
+    width: 2em;
+    margin-right: 1em; }
+  #form input:nth-of-type(n+3) {
+    width: 5em; }
+
+#generatorButton {
+  background-color: green; }
+
+#undoButton {
+  background-color: red; }
+
+#generatorDiv {
+  overflow: scroll; }
+
+table {
+  display: none;
+  margin: auto;
+  color: black;
+  box-shadow: 0 0 5px grey; }
+  table, table th, table td {
+    border: 2px solid black;
+    border-collapse: collapse; }
+
+th, td {
+  padding: 0.3em; }
+
+#copyButton {
+  background-color: blue; }
+
+textarea {
+  padding: 1em;
+  width: 14em;
+  height: 10em;
+  border: 2px solid pink; }

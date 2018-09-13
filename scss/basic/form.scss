@@ -1,0 +1,44 @@
+#form {
+  padding: 1.5em 0;
+  font-size: 0.9em;
+  max-width: 20em;
+  & h2 {
+    padding: 0.2em;
+    margin-bottom: 1em;
+    border-bottom: 2px dashed $primaryHeadline;
+    text-transform: uppercase;
+  }
+  & label {
+    display: inline-block;
+    margin-bottom: 1.5em;
+    margin-right: 0.2em;
+    width: 10em;
+    text-align: left;
+  }
+  & label:nth-of-type(-n+2){
+    width: 12em;
+  }
+  & input {
+    display: inline;
+    padding: 0.5em 0.3em;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    @include greyBoxShadow;
+  }
+  & input:nth-of-type(-n+2) {
+    width: 2em;
+    margin-right: 1em;
+  }
+  & input:nth-of-type(n+3) {
+    width: 5em;
+  }
+}
+
+#generatorButton {
+  background-color: $generatorColor;
+}
+
+#undoButton {
+  background-color: $resetColor;
+}

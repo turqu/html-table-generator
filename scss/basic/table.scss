@@ -1,0 +1,18 @@
+#generatorDiv {
+    overflow: scroll;
+}
+
+table {
+    display: none;
+    margin: auto;
+    color: $tableTextColor;
+    @include greyBoxShadow;
+    &, th, td {
+        border: 2px solid $tableBorderColor;
+        border-collapse: collapse;
+  }
+}
+
+th, td {
+    padding: 0.3em;
+}

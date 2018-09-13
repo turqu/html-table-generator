@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>The HTML Table Generator in Javascript</title>
+        <meta name="description" content="The HTML table generator written in Javascript as the part of learning">
+        <meta name="keywords" content="html table generator javascript">
+        <meta name="author" content="turqu">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link href="css/styles.css" type="text/css" rel="stylesheet">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>The Table generator</h1>
+            <i class="fas fa-table"></i>
+            <h2>Written in HTML, CSS and JavaScript</h2>
+            <a href="#form" class="btn btnHeader">Try it! <span><i class="fas fa-angle-double-down"></i></span></a>
+            <p>The first version of generator is available on <a href="https://codepen.io/jufi/pen/wEdgZP">Codepen</a></p>
+        </header>
+        <section>
+            <div id="form">
+                <h2>Table settings <span><i class="fas fa-angle-double-down"></i></span></h2>
+                <label for="tableColumnsInput">How many columns?</label><input type="number" id="tableColumnsInput" value="3" max="50">
+                <label for="tableRowsInput">How many rows?</label><input type="number" id="tableRowsInput" value="4" max="50">
+                <label for="columnsLabel">The columns' label</label><input type="text" id="columnsLabel" value="Column">
+                <label for="cellsLabel">The cells' label</label><input type="text" id="cellsLabel" value="Cell">
+                <button id="generatorButton">Generate <i class="fas fa-angle-double-down"></i></button>
+                <button id="undoButton" disabled>Undo <i class="fas fa-redo-alt"></i></button>
+            </div>
+            <h2 class="innerHeadline innerText">Ready table <span><i class="fas fa-angle-double-down"></i></span></h2>
+            <p class="innerText">Note: for bigger table use the scroll to see its end</p>
+            <div id="generatorDiv">
+                <table id="generatedTable">
+                    <thead>
+                    <tr id="tableHeadContent"></tr>
+                    </thead>
+                    <tbody id="tableBodyContent">
+                    </tbody>
+                </table>
+            </div>
+            <p id="results"></p>
+            <h2 class="innerHeadline innerText">HTML code <span><i class="fas fa-angle-double-down"></i></span></h2>
+            <button id="copyButton" class="innerText">Copy code</button>
+            <textarea id="tableCode" class="innerText"></textarea>
+        </section>
+        <footer>
+            <h4>designed by turqu / 2018</h4>
+            <a href="https://github.com/turqu"><i class="fab fa-github"> turqu</i></a>
+            <a href="https://codepen.io/jufi/"><i class="fab fa-codepen"> jufi</i></a>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+/* Color scheme */
+$primaryBgColor: #00665e;
+$secondaryBgColor: white;
+$secondaryBgColorTp: rgba(255, 255, 255, 0.5);
+$primaryHeadline: black;
+$headerButtonBgColor: grey;
+$headerButtonColor: white;
+$greyShadow: grey;
+$generatorColor: green;
+$resetColor: red;
+$tableTextColor: black;
+$tableBorderColor: black;
+$copyColor: blue;
+$textAreaBorderColor: pink;
+
+/* Other */
+@mixin greyBoxShadow {
+  box-shadow: 0 0 5px $greyShadow;
+}
