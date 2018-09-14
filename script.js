@@ -5,8 +5,10 @@ function init() {
 
 let generatorButton = document.getElementById("generatorButton");
 let resetButton = document.getElementById("undoButton");
+let copyButton = document.getElementById("copyButton");
 let tableCode = document.querySelector("#tableCode");
 let innerText = document.getElementsByClassName("innerText");
+let inputFields = document.getElementsByTagName("input");
 let generatedTable = document.getElementById("generatedTable");
 generatorButton.onclick = generateTable;
 // The script begins to generate a table
@@ -21,10 +23,12 @@ function generateTable() {
       innerText[i].style.display = "block";
     }
   }
-  generatedTable.style.display = "table";
   addTableColumn();
   addTableRow();
-  tableCode.innerHTML = document.querySelector("#generatorDiv").innerHTML;
+  showTableCode();
+  for ( let i = 0; i<inputFields.length; i++) {
+    inputFields[i].disabled = true;
+  }
 }
 
 // The script creates columns in the thead tag due to the columns' number from the input field
@@ -52,12 +56,27 @@ function addTableRow() {
   } 
 }
 
+function showTableCode() {
+  let inputCode = document.querySelector("#generatorDiv").innerHTML;
+  let outputCode;
+  for ( i=0; i<7; i++) {
+    let x = inputCode.replace("                ", "");
+    inputCode = x;
+  }
+  outputCode = inputCode;
+  tableCode.innerHTML = outputCode;
+}
+
 // This function removes the previously generated table and its HTML code
 resetButton.onclick = resetTable;
 function resetTable() {
   console.log("Clicked undo");
+  document.getElementsByTagName("input").disabled = false;
   generatorButton.disabled = false;
   resetButton.disabled = true;
+  for ( let i = 0; i<inputFields.length; i++) {
+    inputFields[i].disabled = false;
+  }
   for ( let i = 0; i < innerText.length; i++) {
     innerText[i].style.display = "none";
   }
@@ -68,4 +87,10 @@ function resetTable() {
     tableBodyContent.deleteRow(-1);
   }
   tableCode.innerHTML = "";
+}
+// This function copies the code from the textarea
+copyButton.onclick = copyCode;
+function copyCode() {
+  tableCode.select();
+  document.execCommand("copy");
 }

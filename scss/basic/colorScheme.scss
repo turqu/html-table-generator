@@ -1,19 +1,24 @@
 /* Color scheme */
-$primaryBgColor: #00665e;
-$secondaryBgColor: white;
-$secondaryBgColorTp: rgba(255, 255, 255, 0.5);
-$primaryHeadline: black;
-$headerButtonBgColor: grey;
-$headerButtonColor: white;
-$greyShadow: grey;
-$generatorColor: green;
-$resetColor: red;
-$tableTextColor: black;
-$tableBorderColor: black;
-$copyColor: blue;
-$textAreaBorderColor: pink;
-
-/* Other */
-@mixin greyBoxShadow {
-  box-shadow: 0 0 5px $greyShadow;
-}
+$linkColor: #007CDB;
+$linkColorHover: #F0A202;
+$textColor: #11151C;
+$textShadow: #F7F9F9;
+$primaryBgColor: #007CDB;
+$secondaryBgColor: #F7F9F9;
+$secondaryBgColorTp: rgba(247, 249, 249, 0.5);
+$primaryHeadline: #11151C;
+$headerButtonBgColor: #F0A202;
+$headerButtonColor: #F7F9F9;
+$headerButtonBgHover: #007CDB;
+$greyShadow: #191D25;
+$disabledButtonBg: rgb(136, 136, 136);
+$generatorColor: #F0A202;
+$generatorColorHover: rgb(255, 186, 47);
+$undoColor: #DB5461;
+$undoColorHover: rgb(255, 57, 77);
+$tableTextColor: #11151C;
+$tableBorderColor: #11151C;
+$copyColor: #F0A202;
+$copyColorHover: #007CDB;
+$copyColorHoverTextColor: #F7F9F9;
+$textAreaBorderColor: #191D25;

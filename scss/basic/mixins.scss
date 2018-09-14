@@ -1,12 +1,34 @@
+/* Styles mixins */
+
+@mixin greyBoxShadow {
+    box-shadow: 0 0 5px $greyShadow;
+}
+
+@mixin disabledButton {
+    &:disabled {
+        background-color: $disabledButtonBg;
+        &:hover {
+          background-color: $disabledButtonBg;
+        }
+    }
+}
+
 /* Breakpoints for the responsive layout - according to https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
-$extra-small-device: 37.5em !default; /* 600px */
+$mini-device: 23.125em !default; /* 370px - the base style of the site is designed for these devices */
+$extra-small-device: 23.125em !default; /* 370px */
 $small-device: 37.5em !default; /* 600px */
 $medium-device: 48em !default; /* 768px */
 $large-device: 62em !default; /* 992px */
 $very-large-device: 75em !default; /* 1200px */
 
+@mixin mini-device {
+    @media only screen and (max-width: $mini-device) {
+        @content;
+    }
+}
+
 @mixin extra-small-device {
-    @media only screen and (max-width: $extra-small-device) {
+    @media only screen and (min-width: $extra-small-device) {
         @content;
     }
 }

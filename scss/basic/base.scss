@@ -1,0 +1,23 @@
+body {
+  margin: 0 auto;
+  background-color: $primaryBgColor;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  text-align: center;
+  font-family: sans-serif;
+  color: $textColor;
+}
+
+@include small-device {
+  body {
+    font-size: 1.2em;
+  }
+}
+
+a {
+  color: $linkColor;
+  font-weight: bold;
+  &:hover {
+    color: $linkColorHover;
+  }
+}

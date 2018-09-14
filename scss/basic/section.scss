@@ -1,0 +1,200 @@
+section {
+    margin: 2em 1.5em;
+    max-width: 430px;
+    padding: 1em;
+    background-color: $secondaryBgColorTp;
+    & h2 {
+      margin: 1.5em 1em;
+    }
+}
+
+@include extra-small-device {
+  section {
+    margin: 2em 15%;
+  }
+}
+
+@include small-device {
+  section {
+    margin: 2em auto;
+    padding: 1.5em 2em;
+  }
+}
+
+@include very-large-device {
+  section {
+  max-width: 550px;
+  }
+}
+
+// Buttons associated ONLY to the form
+// for very-large-devices these will be displayed within the CSS grid, see the Form module below
+#form button {
+  @include disabledButton;
+}
+
+#generatorButton {
+  background-color: $generatorColor;
+  &:hover {
+    background-color: $generatorColorHover;
+  }
+}
+
+#undoButton {
+  background-color: $undoColor;
+  &:hover {
+    background-color: $undoColorHover;
+  }
+}
+
+// Form module
+#form {
+    margin: 2.5em auto;
+    font-size: 0.9em;
+    max-width: 20em;
+    & h2 {
+      padding: 0.2em;
+      margin-bottom: 1em;
+      border-bottom: 2px dashed $primaryHeadline;
+      text-transform: uppercase;
+    }
+    & label {
+      display: inline-block;
+      margin-bottom: 1.5em;
+      margin-right: 0.2em;
+      width: 10em;
+      text-align: left;
+    }
+    & label:nth-of-type(-n+2){
+      width: 12em;
+    }
+    & input {
+      display: inline;
+      padding: 0.5em 0.3em;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      @include greyBoxShadow;
+    }
+    & input:nth-of-type(-n+2) {
+      width: 2em;
+      margin-right: 1em;
+    }
+    & input:nth-of-type(n+3) {
+      width: 5em;
+    }
+}
+
+@include small-device {
+  input {
+    font-size: 0.9em;
+  }
+}
+
+@include very-large-device {
+  #form {
+    display: grid;
+    max-width: 25em;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(6, auto);
+    & h2 {
+      grid-column: 1 / 3;
+      max-width: 20em;
+    }
+    & label:nth-of-type(-n+2) {
+      grid-row: 2;
+    }
+    & label:nth-of-type(n+3) {
+      grid-row: 4;
+    }
+    & label {
+      margin: 1em auto;
+      text-align: center;
+    }
+    & input:nth-of-type(-n+2) {
+      grid-row: 3;
+      margin: auto;
+    }
+    & input:nth-of-type(n+3) {
+      grid-row: 5;
+      margin: auto;
+    }
+    form button {
+      grid-row: 6;
+      width: 180px;
+      margin: 2em auto 0;
+      font-size: 1em;
+    }
+  }
+}
+
+// Generated table module
+#generatorDiv {
+  overflow: auto;
+}
+
+.innerHeadline {
+  padding-top: 0.5em;
+  margin-bottom: 1em;
+  font-size: 1.4em;
+  border-top: 2px dashed $primaryHeadline;
+  text-transform: uppercase;
+}
+  
+.innerText {
+    display: none;
+}
+
+table {
+  margin: 0 auto 1em;
+  color: $tableTextColor;
+  &, th, td {
+    border: 2px solid $tableBorderColor;
+    border-collapse: collapse;
+  }
+}
+
+th, td {
+  padding: 0.3em;
+}
+
+#copyButton {
+  margin: 0.7em auto;
+  background-color: $copyColor;
+  &:hover {
+    background-color: $copyColorHover;
+    color: $copyColorHoverTextColor;
+  }
+}
+
+textarea {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  margin-bottom: 2.5em;
+  padding: 1em;
+  width: 100%;
+  min-height: 10em;
+  border: 2px solid $textAreaBorderColor;
+  outline: none;
+  resize: vertical; 
+}
+
+@include small-device {
+  textarea {
+    font-size: 0.9em;
+  }
+}
+
+// Scrollbar for bigger tabels
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: $textShadow; 
+}
+::-webkit-scrollbar-thumb {
+  background: $linkColor; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $linkColorHover; 
+}

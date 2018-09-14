@@ -1,0 +1,45 @@
+header {
+    margin: 2em 1.5em;
+    max-width: 430px;
+    padding: 1.3em 1.6em;
+    background-color: $secondaryBgColorTp;
+    & h1 {  
+      padding: 0.3em 0 0;
+      border-top: 3px dashed $primaryHeadline;
+      color: $primaryHeadline;
+      font-size: 1.6em;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+    & > .fas {
+      font-size: 6em;
+      padding: 0.1em;
+    }
+    & h2 {
+      font-size: 1.1em;
+    }
+    & p {
+      padding-bottom: 1em;
+      letter-spacing: 0.1em;
+      font-size: 0.9em;
+    }
+}
+
+@include extra-small-device {
+  header {
+    margin: 2em 15%;
+  }
+}
+
+@include small-device {
+  header {
+    margin: 2em auto;
+    padding: 1.5em 2em;
+  }
+}
+
+@include very-large-device {
+  header {
+  max-width: 550px;
+  }
+}

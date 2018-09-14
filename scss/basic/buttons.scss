@@ -1,0 +1,39 @@
+/* Only links as buttons */
+.btn {
+    display: block;
+    border-radius: 5px;
+    padding: 0.9em;
+    transition: all 0.3s ease-in;
+    @include greyBoxShadow;
+}
+
+.btnHeader {
+    margin: 2em auto;
+    max-width: 100px;
+    border: 2px solid $headerButtonColor;
+    background-color: $headerButtonBgColor;
+    color: $headerButtonColor;
+    font-weight: normal;
+    text-decoration: none;
+    text-shadow: 0 0 5px $headerButtonColor;
+    &:hover {
+        background-color: $headerButtonBgHover;
+        text-shadow: 0 0 10px $headerButtonColor;
+    }
+}
+/* Base for form buttons */
+button {
+    padding: 0.5em 0.7em;
+    margin: 0.7em;
+    border: 1px solid $headerButtonColor;
+    border-radius: 5px;
+    text-shadow: 0 0 1px $textShadow;
+    @include greyBoxShadow;
+    transition: all 0.3s ease-in-out;
+}
+
+@include small-device {
+    button {
+      font-size: 0.9em;
+    }
+}
