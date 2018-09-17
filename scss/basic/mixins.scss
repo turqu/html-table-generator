@@ -13,6 +13,14 @@
     }
 }
 
+/* IE 10+ mixin */
+@mixin ie-browser {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @content;
+    }
+} 
+
+
 /* Breakpoints for the responsive layout - according to https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 $mini-device: 23.125em !default; /* 370px - the base style of the site is designed for these devices */
 $extra-small-device: 23.125em !default; /* 370px */

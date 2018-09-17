@@ -1,6 +1,7 @@
 /* Import basic styles */
 /* Color scheme */
 /* Styles mixins */
+/* IE 10+ mixin */
 /* Breakpoints for the responsive layout - according to https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 /* 370px - the base style of the site is designed for these devices */
 /* 370px */
@@ -189,11 +190,21 @@ section {
     #form input:nth-of-type(n+3) {
       grid-row: 5;
       margin: auto; }
-    #form form button {
+    #form button {
       grid-row: 6;
-      width: 180px;
+      width: 160px;
       margin: 2em auto 0;
       font-size: 1em; } }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #form label {
+    width: 17em;
+    text-align: left; }
+    #form label:nth-of-type(-n+2) {
+      width: 17.5em;
+      margin-right: 1em; }
+  #form input:nth-of-type(-n+2) {
+    margin-right: 1.5em; } }
 
 #generatorDiv {
   overflow: auto; }

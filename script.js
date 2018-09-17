@@ -1,10 +1,9 @@
-window.onload = init;
-function init() {
+document.addEventListener("DOMContentLoaded", function() {
   console.log("DOM is ready");
-}
+});
 
 let generatorButton = document.getElementById("generatorButton");
-let resetButton = document.getElementById("undoButton");
+let undoButton = document.getElementById("undoButton");
 let copyButton = document.getElementById("copyButton");
 let tableCode = document.querySelector("#tableCode");
 let innerText = document.getElementsByClassName("innerText");
@@ -15,7 +14,7 @@ generatorButton.onclick = generateTable;
 function generateTable() {
   console.log("Clicked generate the table");
   generatorButton.disabled = true;
-  resetButton.disabled = false;
+  undoButton.disabled = false;
   for ( let i=0; i<innerText.length; i++) {
     if ( i == 3 ) {
       innerText[i].style.display = "inline-block";
@@ -68,12 +67,11 @@ function showTableCode() {
 }
 
 // This function removes the previously generated table and its HTML code
-resetButton.onclick = resetTable;
-function resetTable() {
+undoButton.onclick = undoTable;
+function undoTable() {
   console.log("Clicked undo");
-  document.getElementsByTagName("input").disabled = false;
   generatorButton.disabled = false;
-  resetButton.disabled = true;
+  undoButton.disabled = true;
   for ( let i = 0; i<inputFields.length; i++) {
     inputFields[i].disabled = false;
   }
